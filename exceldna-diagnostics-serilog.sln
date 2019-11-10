@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{73A1FB8F-ACCE-4A55-BAB8-EA4633DBC7B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4CE3700-05C7-4F68-B9D0-1BD79939142A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{F522FE35-1D3E-4E42-9BDA-EC5491864E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAddIn", "sample\SampleAddIn\SampleAddIn.csproj", "{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.Diagnostics.Serilog", "src\ExcelDna.Diagnostics.Serilog\ExcelDna.Diagnostics.Serilog.csproj", "{BC12B80D-E4D4-4217-9774-BDAAF10E6637}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.Diagnostics.Serilog.Tests", "test\ExcelDna.Diagnostics.Serilog.Tests\ExcelDna.Diagnostics.Serilog.Tests.csproj", "{21069F11-131A-4625-9167-60F8DB81DC01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{34BE712A-1A08-4C06-A3E0-BA8693BEE066}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CHANGES.md = CHANGES.md
+		CODEOWNERS = CODEOWNERS
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC12B80D-E4D4-4217-9774-BDAAF10E6637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC12B80D-E4D4-4217-9774-BDAAF10E6637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC12B80D-E4D4-4217-9774-BDAAF10E6637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC12B80D-E4D4-4217-9774-BDAAF10E6637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21069F11-131A-4625-9167-60F8DB81DC01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21069F11-131A-4625-9167-60F8DB81DC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21069F11-131A-4625-9167-60F8DB81DC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21069F11-131A-4625-9167-60F8DB81DC01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5DDE716-6890-4AF1-9CF6-F88F5B293B0C} = {F522FE35-1D3E-4E42-9BDA-EC5491864E3C}
+		{BC12B80D-E4D4-4217-9774-BDAAF10E6637} = {73A1FB8F-ACCE-4A55-BAB8-EA4633DBC7B7}
+		{21069F11-131A-4625-9167-60F8DB81DC01} = {A4CE3700-05C7-4F68-B9D0-1BD79939142A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C6E8649-8A9F-4354-86BC-56789E862605}
+	EndGlobalSection
+EndGlobal

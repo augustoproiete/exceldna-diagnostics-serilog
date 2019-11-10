@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DnaLibrary Name="Excel-DNA Diagnostics Serilog Add-In" RuntimeVersion="v4.0" xmlns="http://schemas.excel-dna.net/addin/2018/05/dnalibrary">
+  <ExternalLibrary Path="SampleAddIn.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" IncludePdb="true" />
+
+  <Reference Path="Serilog.dll" Pack="true" IncludePdb="true" />
+  <Reference Path="Serilog.Sinks.File.dll" Pack="true" IncludePdb="true" />
+  <Reference Path="Serilog.Sinks.ExcelDnaLogDisplay.dll" Pack="true" IncludePdb="true" />
+  <Reference Path="ExcelDna.Diagnostics.Serilog.dll" Pack="true" IncludePdb="true" />
+</DnaLibrary>
