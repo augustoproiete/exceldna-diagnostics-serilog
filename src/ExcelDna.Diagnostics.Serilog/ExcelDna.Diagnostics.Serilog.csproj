@@ -10,16 +10,16 @@
     <DisableImplicitFrameworkReferences Condition=" '$(TargetFramework)' == 'net461' ">true</DisableImplicitFrameworkReferences>
     <DisableImplicitFrameworkReferences Condition=" '$(TargetFramework)' == 'net472' ">true</DisableImplicitFrameworkReferences>
 
-    <Authors>Caio Proiete and Contributors</Authors>
+    <Authors>C. Augusto Proiete and Contributors</Authors>
     <AssemblyName>ExcelDna.Diagnostics.Serilog</AssemblyName>
     <RootNamespace>ExcelDna</RootNamespace>
 
     <PackageId>ExcelDna.Diagnostics.Serilog</PackageId>
     <PackageTags>exceldna;diagnostic;serilog;logging;excel-dna</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/caioproiete/exceldna-diagnostics-serilog/master/assets/exceldna-diagnostics-serilog-nuget.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/caioproiete/exceldna-diagnostics-serilog</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/augustoproiete/exceldna-diagnostics-serilog/master/assets/exceldna-diagnostics-serilog-nuget.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/caioproiete/exceldna-diagnostics-serilog</RepositoryUrl>
+    <RepositoryUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

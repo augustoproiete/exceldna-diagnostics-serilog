@@ -1,1 +1,1 @@
-See: https://github.com/caioproiete/exceldna-diagnostics-serilog/releases
+See: https://github.com/augustoproiete/exceldna-diagnostics-serilog/releases
