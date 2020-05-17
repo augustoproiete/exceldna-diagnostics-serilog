@@ -146,6 +146,10 @@ In order for the Excel-DNA Diagnostics Serilog to work from an add-in that is pa
   <!-- etc. -->
 ```
 
+## Release History
+
+Click on the [Releases](https://github.com/augustoproiete/exceldna-diagnostics-serilog/releases) tab on GitHub.
+
 ---
 
 _Copyright &copy; 2019-2020 C. Augusto Proiete & Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
