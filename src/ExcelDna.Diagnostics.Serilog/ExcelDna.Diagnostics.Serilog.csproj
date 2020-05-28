@@ -21,7 +21,6 @@
     <PackageIcon>images\icon.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/augustoproiete/exceldna-diagnostics-serilog/master/assets/exceldna-diagnostics-serilog-nuget.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright (c) 2019-2020 C. Augusto Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</Copyright>
