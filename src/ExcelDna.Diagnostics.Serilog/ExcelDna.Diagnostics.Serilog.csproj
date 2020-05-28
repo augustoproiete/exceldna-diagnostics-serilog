@@ -17,6 +17,8 @@
     <MinClientVersion>3.3</MinClientVersion>
     <PackageId>ExcelDna.Diagnostics.Serilog</PackageId>
     <PackageTags>exceldna;diagnostic;serilog;logging;excel-dna</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>images\icon.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/augustoproiete/exceldna-diagnostics-serilog/master/assets/exceldna-diagnostics-serilog-nuget.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -66,6 +68,7 @@
 
   <ItemGroup>
     <None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\..\assets\exceldna-diagnostics-serilog-nuget.png" Pack="true" Visible="false" PackagePath="images\icon.png" />
   </ItemGroup>
 
 </Project>
