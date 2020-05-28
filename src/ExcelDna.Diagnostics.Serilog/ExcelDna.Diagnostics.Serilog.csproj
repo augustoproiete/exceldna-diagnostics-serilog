@@ -10,17 +10,20 @@
     <DisableImplicitFrameworkReferences Condition=" '$(TargetFramework)' == 'net461' ">true</DisableImplicitFrameworkReferences>
     <DisableImplicitFrameworkReferences Condition=" '$(TargetFramework)' == 'net472' ">true</DisableImplicitFrameworkReferences>
 
-    <Authors>C. Augusto Proiete and Contributors</Authors>
+    <Authors>C. Augusto Proiete &amp; Contributors</Authors>
     <AssemblyName>ExcelDna.Diagnostics.Serilog</AssemblyName>
     <RootNamespace>ExcelDna</RootNamespace>
 
+    <MinClientVersion>3.3</MinClientVersion>
     <PackageId>ExcelDna.Diagnostics.Serilog</PackageId>
     <PackageTags>exceldna;diagnostic;serilog;logging;excel-dna</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/augustoproiete/exceldna-diagnostics-serilog/master/assets/exceldna-diagnostics-serilog-nuget.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/augustoproiete/exceldna-diagnostics-serilog</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright (c) 2019-2020 C. Augusto Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</Copyright>
+
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
@@ -59,6 +62,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 
 </Project>
