@@ -1,4 +1,4 @@
-# ExcelDna.Diagnostics.Serilog [![NuGet Version](http://img.shields.io/nuget/v/ExcelDna.Diagnostics.Serilog.svg?style=flat)](https://www.nuget.org/packages/ExcelDna.Diagnostics.Serilog/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna)
+# ExcelDna.Diagnostics.Serilog [![NuGet Version](http://img.shields.io/nuget/v/ExcelDna.Diagnostics.Serilog.svg?style=flat)](https://www.nuget.org/packages/ExcelDna.Diagnostics.Serilog/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog)
 
 Integrate [Excel-DNA Diagnostic Logging](https://github.com/Excel-DNA/ExcelDna/wiki/Diagnostic-Logging) with your [Serilog](https://serilog.net) logging pipeling within your Excel-DNA add-in.
 
