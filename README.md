@@ -1,8 +1,22 @@
-# ExcelDna.Diagnostics.Serilog [![NuGet Version](http://img.shields.io/nuget/v/ExcelDna.Diagnostics.Serilog.svg?style=flat)](https://www.nuget.org/packages/ExcelDna.Diagnostics.Serilog/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog)
+| README.md |
+|:---|
+
+<div align="center">
+
+<img src="assets/exceldna-diagnostics-serilog-nuget.png" alt="ExcelDna.Diagnostics.Serilog" width="100" />
+
+</div>
+
+<h1 align="center">ExcelDna.Diagnostics.Serilog</h1>
+<div align="center">
 
 Integrate [Excel-DNA Diagnostic Logging](https://github.com/Excel-DNA/ExcelDna/wiki/Diagnostic-Logging) with your [Serilog](https://serilog.net) logging pipeling within your Excel-DNA add-in.
 
+[![NuGet Version](http://img.shields.io/nuget/v/ExcelDna.Diagnostics.Serilog.svg?style=flat)](https://www.nuget.org/packages/ExcelDna.Diagnostics.Serilog/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog)
+
 ![Excel-DNA Diagnostics Serilog with Seq screenshot](assets/serilog-logs-seq.png)
+
+</div>
 
 ## Give a Star! :star:
 
@@ -19,7 +33,7 @@ However, it's possible to configure Excel-DNA to write to _other_ `Trace` listen
 [`ExcelDna.Diagnostics.Serilog`](https://github.com/augustoproiete/exceldna-diagnostics-serilog) implements a `TraceListener` that converts `Trace` log events to Serilog log events and integrates with a Serilog logging pipeline, effectivelly forwarding any diagnostic messages written by Excel-DNA to a Serilog logger.
 
 
-## Getting started
+## Getting started :rocket:
 
 Install the [ExcelDna.Diagnostics.Serilog](https://www.nuget.org/packages/ExcelDna.Diagnostics.Serilog/) package from NuGet:
 
