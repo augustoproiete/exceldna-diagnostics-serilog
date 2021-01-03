@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SampleAddIn")]
-[assembly: AssemblyCopyright("Copyright 2019-2020 C. Augusto Proiete & Contributors")]
+[assembly: AssemblyCopyright("Copyright 2019-2021 C. Augusto Proiete & Contributors")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
