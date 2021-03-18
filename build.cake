@@ -1,0 +1,109 @@
+#tool "nuget:?package=NuGet.CommandLine&version=5.8.1"
+
+#addin "nuget:?package=Cake.MinVer&version=1.0.0"
+#addin "nuget:?package=Cake.Args&version=1.0.0"
+
+var target       = ArgumentOrDefault<string>("target") ?? "pack";
+var buildVersion = MinVer(s => s.WithTagPrefix("v").WithDefaultPreReleasePhase("preview"));
+
+Task("clean")
+    .Does(() =>
+{
+    CleanDirectories("./artifacts/**");
+    CleanDirectories("./packages/**");
+    CleanDirectories("./**/^{bin,obj}");
+});
+
+Task("restore")
+    .IsDependentOn("clean")
+    .Does(() =>
+{
+    NuGetRestore("./exceldna-diagnostics-serilog.sln", new NuGetRestoreSettings
+    {
+        NoCache = true,
+    });
+});
+
+Task("build")
+    .IsDependentOn("restore")
+    .DoesForEach(new[] { "Debug", "Release" }, (configuration) =>
+{
+    MSBuild("./exceldna-diagnostics-serilog.sln", settings => settings
+        .SetConfiguration(configuration)
+        .UseToolVersion(MSBuildToolVersion.VS2019)
+        .WithTarget("Rebuild")
+        .WithProperty("Version", buildVersion.Version)
+        .WithProperty("FileVersion", buildVersion.FileVersion)
+        .WithProperty("ContinuousIntegrationBuild", "true")
+    );
+});
+
+Task("test")
+    .IsDependentOn("build")
+    .Does(() =>
+{
+    var settings = new DotNetCoreTestSettings
+    {
+        Configuration = "Release",
+        NoRestore = true,
+        NoBuild = true,
+    };
+
+    var projectFiles = GetFiles("./test/**/*.csproj");
+    foreach (var file in projectFiles)
+    {
+        DotNetCoreTest(file.FullPath, settings);
+    }
+});
+
+Task("pack")
+    .IsDependentOn("test")
+    .Does(() =>
+{
+    var releaseNotes = $"https://github.com/augustoproiete/exceldna-diagnostics-serilog/releases/tag/v{buildVersion.Version}";
+
+    DotNetCorePack("./src/ExcelDna.Diagnostics.Serilog/ExcelDna.Diagnostics.Serilog.csproj", new DotNetCorePackSettings
+    {
+        Configuration = "Release",
+        NoRestore = true,
+        NoBuild = true,
+        IncludeSymbols = true,
+        IncludeSource = true,
+        OutputDirectory = "./artifacts/nuget",
+        ArgumentCustomization = args =>
+            args.AppendQuoted($"-p:Version={buildVersion.Version}")
+                .AppendQuoted($"-p:PackageReleaseNotes={releaseNotes}")
+    });
+});
+
+Task("push")
+    .IsDependentOn("pack")
+    .Does(() =>
+{
+    var url =  EnvironmentVariable("NUGET_URL");
+    if (string.IsNullOrWhiteSpace(url))
+    {
+        Information("No NuGet URL specified. Skipping publishing of NuGet packages");
+        return;
+    }
+
+    var apiKey =  EnvironmentVariable("NUGET_API_KEY");
+    if (string.IsNullOrWhiteSpace(apiKey))
+    {
+        Information("No NuGet API key specified. Skipping publishing of NuGet packages");
+        return;
+    }
+
+    var nugetPushSettings = new DotNetCoreNuGetPushSettings
+    {
+        Source = url,
+        ApiKey = apiKey,
+    };
+
+    foreach (var nugetPackageFile in GetFiles("./artifacts/nuget/*.nupkg"))
+    {
+        DotNetCoreNuGetPush(nugetPackageFile.FullPath, nugetPushSettings);
+    }
+});
+
+RunTarget(target);

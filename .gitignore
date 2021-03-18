@@ -24,5 +24,6 @@ Thumbs.db
 *.nupkg
 **/packages/*
 
-#Ignore files created by ReSharper
-_ReSharper*/
+#cake
+.cake/
+/artifacts/*
