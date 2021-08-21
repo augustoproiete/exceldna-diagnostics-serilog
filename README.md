@@ -24,7 +24,7 @@ If you like or are using this project please give it a star. Thanks!
 
 ## Background
 
-Excel-DNA writes [diagnostic log messages](https://github.com/Excel-DNA/ExcelDna/wiki/Diagnostic-Logging) which can be very useful for troubleshooting issues with an add-in that is not working or behaving as expected. By default, messages are written to the [`LogDisplay`](https://github.com/augustoproiete/serilog-sinks-exceldnalogdisplay) window, which can only be seen by the end-user of the add-in.
+Excel-DNA writes [diagnostic log messages](https://github.com/Excel-DNA/ExcelDna/wiki/Diagnostic-Logging) which can be very useful for troubleshooting issues with an add-in that is not working or behaving as expected. By default, messages are written to the [`LogDisplay`](https://github.com/serilog-contrib/serilog-sinks-exceldnalogdisplay) window, which can only be seen by the end-user of the add-in.
 
 ![Excel-DNA Diagnostics LogDisplay screenshot](assets/default-logdisplay-logs.png)
 
@@ -107,7 +107,7 @@ public class AddIn : IExcelAddIn
 
 ## Example of an Excel-DNA add-in using `ExcelDna.Diagnostics.Serilog`
 
-In the [sample](sample/) folder, you can find an example of an Excel-DNA add-in that captures any diagnostic messages written by Excel-DNA and forwards them to a Serilog logging pipeline configured to write log events to a file on disk and also to Excel-DNA's built-in [`LogDisplay`](https://github.com/augustoproiete/serilog-sinks-exceldnalogdisplay).
+In the [sample](sample/) folder, you can find an example of an Excel-DNA add-in that captures any diagnostic messages written by Excel-DNA and forwards them to a Serilog logging pipeline configured to write log events to a file on disk and also to Excel-DNA's built-in [`LogDisplay`](https://github.com/serilog-contrib/serilog-sinks-exceldnalogdisplay).
 
 ![Excel-DNA Serilog logs in file Notepad screenshot](assets/serilog-logs-file-notepad.png)
 
