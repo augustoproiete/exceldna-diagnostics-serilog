@@ -118,18 +118,18 @@ In the [sample](sample/) folder, you can find an example of an Excel-DNA add-in 
 
 `Trace` events are mapped to Serilog log events in the following way:
 
-| Trace TraceEventType         | Serilog LogEventLevel       |
-| ---------------------------- | --------------------------- |
-| `TraceEventType.Critical`    | `LogEventLevel.Fatal`       |
-| `TraceEventType.Error`       | `LogEventLevel.Error`       |
-| `TraceEventType.Warning`     | `LogEventLevel.Warning`     |
-| `TraceEventType.Information` | `LogEventLevel.Information` |
-| `TraceEventType.Start`       | `LogEventLevel.Debug`       |
-| `TraceEventType.Stop`        | `LogEventLevel.Debug`       |
-| `TraceEventType.Suspend`     | `LogEventLevel.Debug`       |
-| `TraceEventType.Resume`      | `LogEventLevel.Debug`       |
-| `TraceEventType.Transfer`    | `LogEventLevel.Debug`       |
-| `TraceEventType.Verbose`     | `LogEventLevel.Verbose`     |
+| Trace TraceEventType         | :arrow_right: | Serilog LogEventLevel       |
+| ---------------------------- | ------------- | --------------------------- |
+| `TraceEventType.Critical`    | :arrow_right: | `LogEventLevel.Fatal`       |
+| `TraceEventType.Error`       | :arrow_right: | `LogEventLevel.Error`       |
+| `TraceEventType.Warning`     | :arrow_right: | `LogEventLevel.Warning`     |
+| `TraceEventType.Information` | :arrow_right: | `LogEventLevel.Information` |
+| `TraceEventType.Start`       | :arrow_right: | `LogEventLevel.Debug`       |
+| `TraceEventType.Stop`        | :arrow_right: | `LogEventLevel.Debug`       |
+| `TraceEventType.Suspend`     | :arrow_right: | `LogEventLevel.Debug`       |
+| `TraceEventType.Resume`      | :arrow_right: | `LogEventLevel.Debug`       |
+| `TraceEventType.Transfer`    | :arrow_right: | `LogEventLevel.Debug`       |
+| `TraceEventType.Verbose`     | :arrow_right: | `LogEventLevel.Verbose`     |
 
 ### Log Event Properties
 
