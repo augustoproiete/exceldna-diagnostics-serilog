@@ -70,9 +70,9 @@ Task("pack")
         IncludeSymbols = true,
         IncludeSource = true,
         OutputDirectory = "./artifacts/nuget",
-        ArgumentCustomization = args =>
-            args.AppendQuoted($"-p:Version={buildVersion.Version}")
-                .AppendQuoted($"-p:PackageReleaseNotes={releaseNotes}")
+        MSBuildSettings = new DotNetCoreMSBuildSettings()
+            .WithProperty("Version", buildVersion.Version)
+            .WithProperty("PackageReleaseNotes", releaseNotes)
     });
 });
 
