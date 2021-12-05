@@ -1,7 +1,7 @@
 #tool "nuget:?package=NuGet.CommandLine&version=5.11.0"
 
-#addin "nuget:?package=Cake.MinVer&version=1.0.1"
-#addin "nuget:?package=Cake.Args&version=1.0.1"
+#addin "nuget:?package=Cake.MinVer&version=2.0.0"
+#addin "nuget:?package=Cake.Args&version=2.0.0"
 
 var target       = ArgumentOrDefault<string>("target") ?? "pack";
 var buildVersion = MinVer(s => s.WithTagPrefix("v").WithDefaultPreReleasePhase("preview"));
@@ -30,7 +30,6 @@ Task("build")
 {
     MSBuild("./exceldna-diagnostics-serilog.sln", settings => settings
         .SetConfiguration(configuration)
-        .UseToolVersion(MSBuildToolVersion.VS2019)
         .WithTarget("Rebuild")
         .SetVersion(buildVersion.Version)
         .SetFileVersion(buildVersion.FileVersion)
@@ -42,7 +41,7 @@ Task("test")
     .IsDependentOn("build")
     .Does(() =>
 {
-    var settings = new DotNetCoreTestSettings
+    var settings = new DotNetTestSettings
     {
         Configuration = "Release",
         NoRestore = true,
@@ -52,7 +51,7 @@ Task("test")
     var projectFiles = GetFiles("./test/**/*.csproj");
     foreach (var file in projectFiles)
     {
-        DotNetCoreTest(file.FullPath, settings);
+        DotNetTest(file.FullPath, settings);
     }
 });
 
@@ -62,7 +61,7 @@ Task("pack")
 {
     var releaseNotes = $"https://github.com/augustoproiete/exceldna-diagnostics-serilog/releases/tag/v{buildVersion.Version}";
 
-    DotNetCorePack("./src/ExcelDna.Diagnostics.Serilog/ExcelDna.Diagnostics.Serilog.csproj", new DotNetCorePackSettings
+    DotNetPack("./src/ExcelDna.Diagnostics.Serilog/ExcelDna.Diagnostics.Serilog.csproj", new DotNetPackSettings
     {
         Configuration = "Release",
         NoRestore = true,
@@ -70,7 +69,7 @@ Task("pack")
         IncludeSymbols = true,
         IncludeSource = true,
         OutputDirectory = "./artifact/nuget",
-        MSBuildSettings = new DotNetCoreMSBuildSettings
+        MSBuildSettings = new DotNetMSBuildSettings
         {
             Version = buildVersion.Version,
             PackageReleaseNotes = releaseNotes,
@@ -96,7 +95,7 @@ Task("push")
         return;
     }
 
-    var nugetPushSettings = new DotNetCoreNuGetPushSettings
+    var nugetPushSettings = new DotNetNuGetPushSettings
     {
         Source = url,
         ApiKey = apiKey,
@@ -104,7 +103,7 @@ Task("push")
 
     foreach (var nugetPackageFile in GetFiles("./artifact/nuget/*.nupkg"))
     {
-        DotNetCoreNuGetPush(nugetPackageFile.FullPath, nugetPushSettings);
+        DotNetNuGetPush(nugetPackageFile.FullPath, nugetPushSettings);
     }
 });
 
