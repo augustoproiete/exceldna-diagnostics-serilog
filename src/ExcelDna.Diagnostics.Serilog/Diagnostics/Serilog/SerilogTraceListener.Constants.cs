@@ -1,4 +1,4 @@
-﻿#region Copyright 2019-2021 C. Augusto Proiete & Contributors
+﻿#region Copyright 2019-2023 C. Augusto Proiete & Contributors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ namespace ExcelDna.Diagnostics.Serilog
             public const string ExcelDnaSourceContext = "ExcelDna.Integration";
 
             /// <summary>
-            /// The name of the TraceSource used by Excel-DNA 
+            /// The name of the TraceSource used by Excel-DNA
             /// </summary>
             public const string ExcelDnaTraceSourceName = "ExcelDna.Integration";
         }

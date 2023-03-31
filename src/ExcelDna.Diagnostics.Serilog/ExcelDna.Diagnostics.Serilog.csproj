@@ -33,7 +33,7 @@
     <Authors>C. Augusto Proiete &amp; Contributors</Authors>
     <Company>augustoproiete.net</Company>
     <Description>Integrate Excel-DNA Diagnostics Logging with Serilog.</Description>
-    <Copyright>Copyright (c) 2019-2021 C. Augusto Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</Copyright>
+    <Copyright>Copyright (c) 2019-2023 C. Augusto Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</Copyright>
     <PackageTags>exceldna;diagnostic;serilog;logging;excel-dna</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageIcon>images\icon.png</PackageIcon>
